@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Swoop Food Markets</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="inc/styling/css/index.css" type="text/css">
+    </head>
+    <body>
+        <div id="swoop">
+            <div id="cart">
+                <nav>
+                    <p class="activePage" id="viewCartPage">Cart</p>
+                    <p id="viewOwnerPage">Owner</p>
+                    <div class="floatFixer"></div>
+                </nav>
+                <div id="cartBody">
+                    <div id="itemsInCart">
+                        <h3>Items in cart</h3>
+                        <div id="addCartItemsHere"></div>
+                        
+                    </div>
+                    <div id="cartPricing">
+                        <h3>Cart cost</h3>
+                        <div id="addCartItemPricesHere"></div>
+                        
+                    </div>
+                    <div class="floatFixer"></div>
+                    <div id="purchaseButton">Purchase</div>
+                    <div class="floatFixer"></div>
+                </div>
+                <div id="ownerBody">
+                    <div id="forSale">
+                        <h3>This store is for sale.</h3>
+                    </div>
+                    <div id="notForSale">
+                        <h3>Owner panel</h3>
+                        <div id="productSettings">
+                            
+                            <div class="productSettingsTab">
+                                <p>Sandwich</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldSandwich">
+                                    <div class="addStockButton" onclick="buyStock('Sandwich');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldSandwich">
+                                    <div class="changeProductPrice" onclick="setPrice('Sandwich');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+
+                            <div class="productSettingsTab">
+                                <p>Pizza</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldPizza">
+                                    <div class="addStockButton" onclick="buyStock('Pizza');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldPizza">
+                                    <div class="changeProductPrice" onclick="setPrice('Pizza');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+
+                            <div class="productSettingsTab">
+                                <p>Brød</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldBread">
+                                    <div class="addStockButton" onclick="buyStock('Bread');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldBread">
+                                    <div class="changeProductPrice" onclick="setPrice('Bread');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+
+                            <div class="productSettingsTab">
+                                <p>Æble</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldApple">
+                                    <div class="addStockButton" onclick="buyStock('Apple');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldApple">
+                                    <div class="changeProductPrice" onclick="setPrice('Apple');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+
+                            <div class="productSettingsTab">
+                                <p>Hotdog</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldHotdog">
+                                    <div class="addStockButton" onclick="buyStock('Hotdog');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldHotdog">
+                                    <div class="changeProductPrice" onclick="setPrice('Hotdog');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+
+                            <div class="productSettingsTab">
+                                <p>Burger</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldBurger">
+                                    <div class="addStockButton" onclick="buyStock('Burger');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldBurger">
+                                    <div class="changeProductPrice" onclick="setPrice('Burger');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+
+                            <div class="productSettingsTab">
+                                <p>Kage</p>
+                                <div class="productSettingsStock">
+                                    <input type="text" name="increaseStockField" placeholder="1" id="buyStockFieldCake">
+                                    <div class="addStockButton" onclick="buyStock('Cake');">Buy stock</div>
+                                </div>
+                                <div class="productSettingsPrice">
+                                    <input type="text" name="changeProductPriceField" placeholder="50" id="setPriceFieldCake">
+                                    <div class="changeProductPrice" onclick="setPrice('Cake');">Change price</div>
+                                </div>
+                                <div class="floatFixer"></div>
+                            </div>
+                            <div class="floatFixer"></div>
+                            
+                        </div>
+                        <div id="cashRegisterButton" onclick="takeCash();">Take cash from register</div>
+                        <div class="floatFixer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="floatFixer"></div>
+            <div id="products">   
+
+            </div>
+        </div>
+
+        <script src="inc/styling/js/index.js"></script>
+    </body>
+</html>

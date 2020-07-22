@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Times New Roman';
+    overflow: hidden;
+}
+
+#swoop {
+    margin: 0 auto;
+    max-width: 1080px;
+    display: none;
+}
+
+.floatFixer {
+    clear: both;
+}
+
+/* -- Product Tab -- */
+
+.productTab {
+    width: calc(100% - 10px);
+    margin: 5px;
+    background-color: #fff;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    
+}
+
+.productTab>.productHead {
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 1);
+}
+
+.productTab>.productHead>.productName {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: left;
+    width: 80%;
+}
+
+.productTab>.productHead>.productAddToCart {
+    float: left;
+    width: 10%;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.productTab>.productHead>.productRemoveFromCart {
+    float: left;
+    width: 10%;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.productTab>.productHead>.productAddToCart:hover {
+    color: rgba(222, 205, 147, 1);
+}
+
+.productTab>.productHead>.productRemoveFromCart:hover {
+    color: rgba(222, 205, 147, 1);
+}
+
+.productTab>.productBody>img {
+    display: block;
+    margin: 0 auto;
+    height: 75px;
+    margin-top: 37.5px;
+    margin-bottom: 37.5px;
+}
+
+.productFoot {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.productFoot>.productStock {
+    float: left;
+}
+
+.productFoot>.productPrice {
+    float: right;
+}
+
+@media only screen and (min-width: 768px) {
+    .productTab {
+        width: calc(50% - 10px);
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .productTab {
+        width: calc(33.3% - 10px);
+        float: left;
+    }
+}
+
+/* -- Cart -- */
+#cart {
+    width: calc(100% - 10px);
+    margin: 5px;
+    background-color: #fff;
+}
+
+#cart>nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.3em;
+}
+
+#cart>nav>p {
+    float: left;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.activePage {
+    background-color: rgba(222, 205, 147, 1);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* -- Cart body -- */
+#cart>#cartBody {
+    padding: 5px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+h3 {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#cart>#cartBody>#itemsInCart {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+#cart>#cartBody>#itemsInCart>.cartItem>.cartItemAmount {
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#cart>#cartBody>#cartPricing {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+#cart>#cartBody>#purchaseButton {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(222, 205, 147, 1);
+    max-width: 40%;
+    color: rgba(255, 255, 255, 1);
+    float: right;
+    margin-top: 15px;
+}
+
+/* -- Owner body -- */
+#cart>#ownerBody {
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#cart>#ownerBody>#forSale>h3 {
+    width: 50%;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+#cart>#ownerBody>#forSale>#buyStoreButton {
+    background-color: rgba(222, 205, 147, 1);
+    max-width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: right;
+    margin: 5px;
+}
+
+
+#cart>#ownerBody>#notForSale {
+    display: none;
+    padding-top: 15px;
+    
+}
+
+
+#cart>#ownerBody>#notForSale>#cashRegisterButton {
+    background-color: rgba(222, 205, 147, 1);
+    max-width: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: right;
+    margin: 5px;
+}
+
+.productSettingsTab {
+    width: calc(100% - 10px);
+    margin: 5px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.productSettingsTab>p {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.productSettingsTab>.productSettingsStock {
+    float: left;
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.productSettingsTab>.productSettingsPrice {
+    float: left;
+    width: 50%;
+    
+}
+
+.productSettingsTab>.productSettingsPrice>input, .productSettingsTab>.productSettingsStock>input {
+    width: 100%;
+    border: 2px solid transparent;
+    border-left: 2px solid rgba(222, 205, 147, 1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.productSettingsTab>.productSettingsPrice>.changeProductPrice {
+    background-color: rgba(255, 255, 255, 1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.productSettingsTab>.productSettingsPrice>.changeProductPrice:hover {
+    background-color: rgba(222, 205, 147, 1);
+}
+
+.productSettingsTab>.productSettingsStock>.addStockButton {
+    background-color: rgba(255, 255, 255, 1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.productSettingsTab>.productSettingsStock>.addStockButton:hover {
+    background-color: rgba(222, 205, 147, 1);
+}
+
+@media only screen and (min-width: 768px) {
+    .productSettingsTab {
+        width: calc(50% - 10px);
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .productSettingsTab {
+        width: calc(33.3% - 10px);
+        float: left;
+    }
+}
